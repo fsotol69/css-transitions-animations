@@ -1,6 +1,7 @@
-body{
-  background-color:aliceblue;
+body {
+  background-color: aliceblue;
 }
+
 #clock {
   width: 400px;
   height: 400px;
@@ -8,7 +9,6 @@ body{
   border: 10px solid black;
   border-radius: 50%;
   position: relative;
-
 }
 
 #seconds {
@@ -17,6 +17,10 @@ body{
   background-color: gray;
   margin-left: 198px;
   margin-top: 20px;
+  transform-origin: 100% 100%;
+  animation: turning 60s infinite;
+  animation-timing-function: linear;
+  rotate: 180deg;
 }
 
 #minutes {
@@ -24,15 +28,25 @@ body{
   height: 140px;
   background-color: darkslategray;
   margin-left: 198px;
-  margin-top: 20px;
+  margin-top: -140px;
+  transform-origin: 100% 100%;
+  animation: turning 3600s infinite;
+  animation-timing-function: linear;
 }
 
 #hours {
   width: 8px;
   height: 120px;
   background-color: black;
-  margin-left: 196px;
-  margin-top: 80px;
- 
+  margin-left: 197px;
+  margin-top: -120px;
+  transform-origin: 100% 1000%;
+  animation: turning 43200‬s infinite;
+  animation-timing-function: linear;
 }
 
+@keyframes turning {
+  100% {
+    transform: rotate(1turn);
+  }
+}
